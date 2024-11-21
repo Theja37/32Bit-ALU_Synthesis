@@ -36,7 +36,7 @@ used.
 • Genus Script file with .tcl file Extension commands are executed one by one to synthesize the netlist.
 
 alu_32bit.v
-
+~~~
 module alu_32bit_case(y,a,b,f);
 input [31:0]a;
 input [31:0]b;
@@ -56,9 +56,9 @@ case(f)
 endcase
 end
 endmodule
-
+~~~
 run.tcl
-
+~~~
 read_libs /cadence/install/FOUNDRY-01/digital/90nm/dig/lib/slow.lib
 read_hdl alu_32bit.v
 elaborate
@@ -78,7 +78,7 @@ report_gates > alu_32bit_gates.txt
 write_hdl > alu_32bit_netlist.v
 
 gui_show
-
+~~~
 
 #### Synthesis RTL Schematic :
 ![image](https://github.com/user-attachments/assets/49e4b349-9851-44de-9f85-f33cd375444e)
